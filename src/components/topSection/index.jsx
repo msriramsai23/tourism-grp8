@@ -84,7 +84,7 @@ export function TopSection(){
             <Logo>STARK TRAILS</Logo>
             <Slogan>Travel across the globe with us.</Slogan>
             <Paragraph>
-                travel the world with us and join the once the once in a lifetime experience.
+                travel the world with us and join the once in a lifetime experience.
             </Paragraph>
         </TopSectionContainer>
     )
