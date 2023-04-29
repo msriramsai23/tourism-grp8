@@ -5,6 +5,7 @@ import {Canvas} from '@react-three/fiber';
 import { Suspense } from 'react';
 import { Earth } from './components/earth';
 import {TopSection} from './components/topSection';
+import Hero from './components/Hero';
 
 const CanvasContainer = styled.div`
   width: 100%;
@@ -19,6 +20,7 @@ function App() {
                 <Earth/>
               </Suspense>
             </Canvas>
+            < Hero/>
         </CanvasContainer>
 }
 
