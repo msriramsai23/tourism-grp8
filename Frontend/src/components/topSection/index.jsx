@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const TopSectionContainer =styled.div`
 position:absolute;
 width:100%;
-height:75%;
+height:70%;
 top:0;
 left:0;
 
