@@ -8,6 +8,7 @@ import {TopSection} from './components/topSection';
 import Hero from './components/Hero';
 import Navbar1 from './components/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Cards from './components/cardsdisplay';
 
 
 const CanvasContainer = styled.div`
@@ -25,6 +26,7 @@ function App() {
  </Suspense>
  </Canvas>
 < Hero/>
+<Cards/>
 
 
 </CanvasContainer>
@@ -33,16 +35,4 @@ function App() {
 }
 
 export default App;
-
-<CanvasContainer> 
-           
-           <TopSection/>
-           <Canvas>
-           <Suspense fallback={null}>
-              <Earth/>
-          </Suspense>
-          </Canvas>
-         < Hero/>
-         
-</CanvasContainer>
 

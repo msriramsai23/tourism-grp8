@@ -6,40 +6,32 @@ const cors = require('cors');
 app.use(cors())
 
 app.use(express.json())
+console.log('joy')
 
 // Endpoint to insert data into aushad table
-app.post('/api/payment', async (req, res) => {
+app.get('/api/all', async (req, res) => {
   let connection;
-
   try {
     connection = await mysql.createConnection({
-      host: '127.0.0.1',
+      host: 'localhost',
       user: 'root',
       password: 'medical',
-      database: 'my_database3'
+      database: 'stark'
     });
-
-    console.log(req.body);
-    const { name, preference, city, amount_to_donate , dateA } = req.body;
-
-    // Insert the data into the aushad table
-    await connection.execute(`
-      INSERT INTO PaymentTable (name, preference, city, amount_to_donate , dateA)
-      VALUES (?, ?, ?, ?, ?)
-    `, [ name, preference, city, amount_to_donate , dateA]);
-   
-    console.log([name, preference, city, amount_to_donate , dateA]);
-
-    res.status(201).json({ message: 'Data inserted successfully' });
+    const [rows, fields] = await connection.execute('SELECT * FROM stark_8');
+    res.json(rows);
+    console.log('joy');
   } catch (error) {
-    console.error('Error inserting data:', error);
-    res.status(500).json({ message: 'Error inserting data' });
+    console.error('Error retrieving data:', error);
+    res.status(500).json({ message: 'Error retrieving data' });
   } finally {
     if (connection) {
       connection.end();
     }
   }
 });
+
+
 app.listen(5000, () => {
   console.log('Server started on port 5000');
 });
