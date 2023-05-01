@@ -9,6 +9,11 @@ import Hero from './components/Hero';
 import Navbar1 from './components/Navbar';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Cards from './components/cardsdisplay';
+import Package from './components/Packages';
+
+import About from './components/About';
+import Services from './components/Services';
+import Footer from './components/Footer';
 
 
 const CanvasContainer = styled.div`
@@ -26,10 +31,14 @@ function App() {
  </Suspense>
  </Canvas>
 < Hero/>
-<Cards/>
 
 
+<Package/>
+<About/>
+<Services/>
+<Footer/>
 </CanvasContainer>
+
 
 
 }

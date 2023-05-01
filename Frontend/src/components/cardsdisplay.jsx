@@ -13,7 +13,7 @@ function Cards() {
   }, []);
 
   return (
-    <div  style={{backgroundColor:"black", textAlign:"center", justifyContent:"center"}}>
+    <div  style={{backgroundColor:"white", textAlign:"center", justifyContent:"center"}}>
     <h1 style={{color:'purple'}}>Places to travel</h1>
     <div className="card-container" style={{backgroundColor:"black", paddingTop:"10px",paddingBottom:"10px"}}>
      
